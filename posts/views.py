@@ -133,3 +133,6 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('/')
+
+def web_team(request):
+    return render(request, 'posts/webteam.html')

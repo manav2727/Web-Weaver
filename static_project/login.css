@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .body,html{
     padding: 0;
     margin: 0;
@@ -69,22 +70,21 @@
     border-radius: 3%;
 }
 
-footer {
+.footer {
+    font-family: "Poppins", sans-serif;
     color: #fff;
     text-align: center;
-    padding: 0.4rem 0;
-    display: flex!important;
-    flex-direction: row;
-    /* border-top: solid 1px white; */
-    justify-content: space-evenly!important;
-    justify-content: space-between;
-    background-color: #010718;
+    padding: 0.8rem 0;
+    display: flex;
+    justify-content: space-evenly;
   }
-  footer .leftieee,
-  footer .middleieee {
+  .footer .leftieee,
+  .footer .middleieee {
     padding-top: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400!important;
   }
-  footer .social-links {
+  .footer .social-links {
     display: flex;
     /* float: right; */
     justify-content: center;
@@ -108,16 +108,16 @@ footer {
   }
   
  
-  footer span {
+  .footer span {
     font-size: 16px;
   }
-  footer span a {
+  .footer span a {
     color: white;
     border: 1px white solid;
     padding: 5px;
     border-radius: 3px;
   }
-  footer span a:hover {
+  .footer span a:hover {
     background-color: white;
     color: black;
   }
@@ -302,14 +302,15 @@ label span:before {
 }
 
 .footer {
-  background: linear-gradient(45deg, #19638b, #011722);
   color: #fff;
   text-align: center;
   padding: 10px;
   display: flex;
+  font-size: 15px;
   flex-direction: row;
   /* border-top: solid 1px white; */
-  justify-content: space-evenly;
+  justify-content: space-evenly!important;
+  justify-content: space-between;
   width: 100%;
   position: fixed;
   left: 0;
@@ -344,6 +345,7 @@ label span:before {
 
 .social-links a:hover {
   color: white;
+  background-color: #11101d;
 }
 
 .footer span {
@@ -521,4 +523,91 @@ input[type="submit"]:hover{
 }
 .signup_link a:hover{
   text-decoration: underline;
+}
+
+
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+  footer{
+    display: inline-block;
+  }
+}
+ 
+/* For Tablet View */
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+  footer{
+    display: flex;
+  }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1253px){
+  footer{
+    display: inline-block;
+  }
+}
+
+@media (min-device-width: 480px) and (max-device-width: 768px){
+  footer
+  {
+    display: flex;
+  }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px)
+and (orientation: portrait) {
+  footer
+  {
+    display: flex;
+  }
+  
+}
+ 
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px)
+and (orientation: landscape) {
+  footer
+  {
+    display: flex;
+  }
+  
+}
+ 
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+  footer
+  {
+    display: flex;
+  }
+
+}
+ 
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  footer
+  {
+    display: flex;
+  }
+}
+ 
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  footer
+  {
+    display: flex;
+  }
+}
+ 
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px)
+and (-webkit-min-device-pixel-ratio: 3) {
+   footer
+  {
+    display: flex;
+  }
+  
 }

@@ -14,6 +14,7 @@ urlpatterns = [
     path('posts/', include('posts.urls', namespace='posts')),
     path('login/', login_view, name='login-view'),
     path('logout/', logout_view, name='logout'),
+    path('webteam/', web_team, name="web_team"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
