@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@font-face {
+  font-family: solthin;
+  src: url(solthinregular.ttf);
+}
 .body {
   scroll-behavior: smooth;
 }
@@ -28,7 +32,7 @@
 }
 .webweaver .headingname .titlename {
   font-size: 80px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'solthin';
 }
 .svgs {
   padding-top: 2%;

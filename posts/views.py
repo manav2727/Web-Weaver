@@ -39,7 +39,7 @@ def post_create(request):
     post_added = False
 
     if request.method == 'POST':
-        print(request.FILES)
+        # print(request.FILES)
         data = request.POST
         dataImage = request.FILES
         title = data['title']
@@ -118,7 +118,7 @@ def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-        print('Username : {}\nPassword : {}'.format(username, password))
+        # print('Username : {}\nPassword : {}'.format(username, password))
         user = authenticate(username=username, password=password)
         if user is not None:
             login(request, user)

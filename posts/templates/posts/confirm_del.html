@@ -50,11 +50,32 @@
       <a href="{{path_to_posts}}">POSTS</a>
       {% if request.user.is_authenticated %}
       <a href="{{path_to_add_posts}}">ADD POST</a>
-      <a href="#">{{request.user}}</a>
+      <a href="#" data-toggle="modal" data-target="#exampleModal">{{request.user}}</a>
       {% else %}
       <a href="{% url 'login-view' %}">LOGIN</a>
       <a href="https://credenz.in/">REGISTER</a>
       {% endif %}
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          LOGOUT <i class="fa fa-lock"></i><br><br>
+          <i class="fa fa-question-circle"></i> Are you sure you want to logout?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <div class="modal-footer"><a class="btn btn-danger btn-block" href="{% url 'logout' %}">Logout</a></div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -90,7 +111,7 @@
         © PICT IEEE Student Branch
       </div> -->
     <div class="middleieee">
-      &copy; Web Weaver | Made with ❤️ by <a href="">PISB Web Team</a>
+      &copy; Web Weaver | Made with ❤️ by <a href="{% url 'web_team' %}">PISB Web Team</a>
     </div>
     <!-- <div class="lastieee">
         <div class = "social-links">
